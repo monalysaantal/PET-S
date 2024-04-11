@@ -1,93 +1,122 @@
 body {
     width: 100%;
     height: 100vh;
-    margin: 0%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%; /* Asigură că div-ul ocupă întreaga lățime */
+    height: 100vh; /* Înălțimea div-ului să fie echivalentă cu înălțimea ecranului */
+    display: flex;
+    justify-content: center; /* Centrare orizontală */
+    align-items: flex-end; /* Aliniere la partea de jos a div-ului */
+    padding-top: 100px;
 }
 
 .hero-section img {
-    width: 1300px;
-    height: auto;
-    position: relative;
-    z-index: -1;
+    width: 60%; /* Imaginea ocupă întreaga lățime a div-ului */
+    height: auto; /* Înălțimea se ajustează automat proporțional cu lățimea */
+    position: absolute;
+    bottom: 0; /* Imaginea se va poziționa în partea de jos a div-ului */
+    z-index: -1; /* Asigură că imaginea de fundal este plasată în spatele celorlalte elemente */
+    top: 155px;
 }
 
 .navigation {
     position: absolute;
     top: 0%;
-    bottom: 70px;
+    bottom: 50px;
     left: 50%; /* Va fi poziționat pe mijlocul secțiunii */
     transform: translateX(-50%); /* Va fi centrat orizontal */
     z-index: 1; /* Asigură că logo-ul este afișat deasupra imaginii */
 }
 
-.hero-text {
-    margin-top: -580px;
-    margin-bottom: 500px;
-    margin-left: 100px;
+.logo {
+    padding-bottom: 10px;
 }
 
-.between-section {
-    margin-top: 100px;
-    margin-left: 540px;
+.main-square {
+    z-index: 1;
+    position: absolute;
+    top: calc((100vh - 500px) / 2);
+    left: calc((100vw - 500px) / 2);
+    color: #8CC4D9;
+    stroke: black;
+    margin-top: 138px;
+    margin-left: -65px;
+}
+
+.first-text {
+    position: absolute;
+    z-index: 2;
+    margin-top: -500px;
+    margin-left: -25px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.first-text:hover {
+    transform: scale(1.2);
+}
+
+.first-rectangle {
+    position: absolute;
+    margin-top: -466px;
+    margin-left: -122px;
+    z-index: 2;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
-.between-section:hover {
-    transform: scale(1.2);
-}
-
-.carousel-section {
-    margin-top: 70px;
-}
-
-.left-arrow {
-    margin-left: 30px;
-    margin-top: -15px;
-    transition: transform 0.3s ease;
-}
-
-.right-arrow {
-    margin-left: 1120px;
-    margin-top: -15px;
-    transition: transform 0.3s ease;
-}
-
-.right-arrow:hover {
-    transform: scale(1.2);
-}
-
-.left-arrow:hover {
+.first-rectangle:hover {
     transform: scale(1.2);
 }
 
 
-.adoption-section {
-    margin-top: 90px;
-    margin-left: 640px;
-    margin-bottom: 50px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+
+.first-line {
+    position: absolute;
+    margin-top: -415px;
+    margin-left: -108px;
+    z-index: 3;
 }
 
-.adoption-section:hover {
-    transform: scale(1.2);
+.second-rectangle,.last-rectangle {
+    position: absolute;
+    z-index: 3;
+    margin-top: -500px;
+    margin-left: -25px;
 }
 
-.front-image {
-    margin-top: -620px;
-    margin-left: 400px;
-    transition: transform 0.3s ease;
+.second-rectangle {
+    margin-top: -420px ;
+    margin-left: -124px;
 }
 
-.front-image:hover {
-    transform: scale(1.2);
+.second-line {
+    position: absolute;
+    z-index: 3;
+    margin-top: -363px ;
+    margin-left: -109px;
 }
 
+.last-rectangle {
+   margin-top: -369px;
+   margin-left: -120px;
+}
+.third-line {
+    position: absolute;
+    z-index: 3;
+    margin-top: -315px;
+    margin-left: -108px;
+}
 
-.info-section {
-    margin-top: 50px;
-    margin-left: 390px;
+.last-section {
+    position: absolute;
+    z-index: 3;
+    margin-top: -400px;
+    margin-left: -85px;
 }
 
 footer {
@@ -95,45 +124,18 @@ footer {
    overflow: hidden;
 }
 
-.first-row{
+footer h2:first-of-type {
     font-family: "Agdasima", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #265E73;
-    margin-left: 510px;
+    margin-left: 75px;
 }
-
-.second-row {
-    text-align: center;
-    font-family: "Alike Angular", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    margin-top: 90px;
-    color: #265E73;
-    margin-left: 580px;
-}
-
-.social-icons {
-    text-align: center;
-    
-    
-}
-
-.social-icons svg {
-    margin: 0 5px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-.social-icons svg:hover {
-    transform: scale(1.2);
-}
-
 
 .copyright-section {
     text-align: center;
     bottom: 0; /* Plasează la partea de jos a footer-ului */
-    margin-top: 200px;
+    margin-top: 100px;
     
 }
 
